@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="./viewall.css">
+</head>
+<body>
+
+<h2>Student Records</h2>
+
+<div class="search-container">
+    <input type="text" id="search" placeholder="Search by name">
+    <button onclick="searchStudent()">Search</button>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>Father</th>
+            <th>Mother</th>
+            <th>Course</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Branch</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="studentTable"></tbody>
+</table>
+
+<script src="./viewall.js"></script>
+</body>
+</html>

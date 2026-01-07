@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="./addstudent.css">
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Add Student</h2>
+
+        <form id="studentForm">
+
+            <!-- Student Name -->
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" name="studentName" placeholder="Enter student name">
+
+            <!-- Mobile & Email -->
+            <div class="row">
+                <div class="col">
+                    <label for="mobile">Mobile No</label>
+                    <input type="text" id="mobile" name="mobile">
+                </div>
+                <div class="col">
+                    <label for="email">Email Id</label>
+                    <input type="email" id="email" name="email">
+                </div>
+            </div>
+
+            <!-- Father & Mother -->
+            <div class="row">
+                <div class="col">
+                    <label for="fatherName">Father Name</label>
+                    <input type="text" id="fatherName" name="fatherName">
+                </div>
+                <div class="col">
+                    <label for="motherName">Mother Name</label>
+                    <input type="text" id="motherName" name="motherName">
+                </div>
+            </div>
+
+            <!-- Course & DOB -->
+            <div class="row">
+                <div class="col">
+                    <label for="course">Select Course</label>
+                    <select id="course" name="course">
+                        <option value="">Select</option>
+                        <option value="BSc">BSc</option>
+                        <option value="BCA">BCA</option>
+                        <option value="BCom">BCom</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="dob">Date Of Birth</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+            </div>
+
+            <!-- Gender -->
+            <div class="row">
+                <div class="col">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender">
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Others">Others</option>
+                    </select>
+
+                </div>
+            </div>
+
+            <!-- Branch -->
+            <label>Select Branch</label>
+            <div class="branch">
+                <select id="branch" name="branch">
+                    <option value="">Select Branch</option>
+                    <option value="CSF">CSF</option>
+                    <option value="IT">IT</option>
+                    <option value="CFC">CFC</option>
+                    <option value="Civil">Civil</option>
+                </select>
+
+            </div>
+
+            <!-- Address -->
+            <label for="address">Address</label>
+            <textarea id="address" name="address"></textarea>
+
+            <!-- Submit -->
+            <button type="submit" id="submitBtn">Submit</button>
+
+        </form>
+    </div>
+<script src="./addstudent.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student</title>
+<link rel="stylesheet" href="./editform.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 id="formTitle">Edit Student</h2>
+
+        <form id="studentForm">
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" readonly><br>
+
+            <label for="mobile">Mobile:</label>
+            <input type="text" id="mobile"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email"><br>
+
+            <label for="father">Father Name:</label>
+            <input type="text" id="father"><br>
+
+            <label for="mother">Mother Name:</label>
+            <input type="text" id="mother"><br>
+
+            <label for="course">Course:</label>
+            <input type="text" id="course"><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob"><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender"><br>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br>
+
+            <label for="branch">Branch:</label>
+            <input type="text" id="branch"><br>
+
+            <label for="address">Address:</label><br>
+            <textarea id="address"></textarea><br>
+
+            <button type="button" onclick="updateStudent()">Update</button>
+        </form>
+    </div>
+
+    <script>
+       
+        window.onload = function () {
+            const params = new URLSearchParams(window.location.search);
+            const name = params.get("name");
+            if (!name) return;
+
+            const data = localStorage.getItem(name).split(" | ");
+
+            document.getElementById("studentName").value = name;
+            document.getElementById("mobile").value = data[0].split(":")[1];
+            document.getElementById("email").value = data[1].split(":")[1];
+            document.getElementById("father").value = data[2].split(":")[1];
+            document.getElementById("mother").value = data[3].split(":")[1];
+            document.getElementById("course").value = data[4].split(":")[1];
+            document.getElementById("dob").value = data[5].split(":")[1];
+            document.getElementById("gender").value = data[6].split(":")[1];
+            document.getElementById("branch").value = data[7].split(":")[1];
+            document.getElementById("address").value = data[8].split(":")[1];
+        }
+
+        // Update student
+        function updateStudent() {
+            const name = document.getElementById("studentName").value;
+
+            const value =
+                "Mobile:" + mobile.value +
+                " | Email:" + email.value +
+                " | Father:" + father.value +
+                " | Mother:" + mother.value +
+                " | Course:" + course.value +
+                " | DOB:" + dob.value +
+                " | Gender:" + gender.value +
+                " | Branch:" + branch.value +
+                " | Address:" + address.value;
+
+            localStorage.setItem(name, value);
+            alert("Student Updated Successfully!");
+            window.location.href = "viewall.html"; 
+        }
+
+    </script>
+
+</body>
+
+</html>

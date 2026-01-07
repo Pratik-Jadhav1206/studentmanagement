@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-image:url(./Background.png); 
+    background-size: cover;      /* Cover full screen */
+    background-repeat: no-repeat;/* No repeat */
+    background-position: center; /* Center the image */
+    height: 100vh;
+    margin: 0;
+}
+.addstd{
+    height: 260px;
+    width: 200px;
+    position: relative;
+    top: 195px;
+    left: 320px;
+    border-radius: 20px;
+}
+.addstd>a>img{
+    height: 200px;
+    width: 200px;
+    border-radius: 22px;
+}
+.addstd >a>h2{
+  position: relative;
+  left: 25px;
+  top: 10px;
+}
+
+.viewstd{
+    height: 260px;
+    width: 200px;
+    position: relative;
+    top: -60px;
+    left: 620px;
+    border-radius: 20px;
+}
+.viewstd >a>img{
+    height: 200px;
+    width: 200px;
+    border-radius: 22px;
+}
+.viewstd>a>h2{
+  position: relative;
+  left: 25px;
+  top: 10px;
+}
+a{
+    text-decoration: none;
+}
+.mainheading{
+    font-size: 25px;
+    position: relative;
+    top: 25px;
+    left: 400px;
+    height: 82px;
+    width: 725px;
+    border: 2px solid;
+    padding: 10px;
+    border-radius:7px;
+    
+}
+/* ===============================
+   RESPONSIVE DESIGN
+   =============================== */
+
+/* Tablet */
+@media (max-width: 992px) {
+
+  .mainheading {
+    left: 0;
+    margin: 20px auto;
+    width: 90%;
+    text-align: center;
+  }
+
+  .addstd,
+  .viewstd {
+    position: static;
+    margin: 20px auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  html, body {
+    height: auto;
+  }
+
+  .mainheading {
+    font-size: 10px;
+    width: 95%;
+    height: 130px;
+    padding: 0px;
+    position: relative;
+    top:0px;
+
+  }
+
+  .addstd,
+  .viewstd {
+    width: 180px;
+    height: 180px;
+
+    
+  }
+  .addstd{
+    position: relative;
+    top:0px;
+    left: 0;
+  }
+  .viewstd{
+    position: relative;
+    left: -10px;
+    top: 20px;
+  }
+  body{
+    height: 110vh;
+  }
+  .addstd a img,
+  .viewstd a img {
+    width: 150px;
+    height: 180px;
+  }
+
+  .addstd > a > h2,
+  .viewstd > a > h2 {
+    left: 0;
+    text-align: center;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 400px) {
+
+  .mainheading {
+    font-size: 18px;
+  }
+
+  .addstd,
+  .viewstd {
+    width: 160px;
+  }
+
+  .addstd a img,
+  .viewstd a img {
+    width: 160px;
+    height: 160px;
+  }
+}

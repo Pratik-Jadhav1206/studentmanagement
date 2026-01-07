@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-image: url(./Background.png);
+  background-size: cover; /* Cover full screen */
+  background-repeat: no-repeat; /* No repeat */
+  background-position: center; /* Center the image */
+  height: 120vh;
+  margin: 0;
+
+  padding: 30px 0;
+  
+}
+
+
+.container {
+  width: 450px;
+  height: 750x;
+  margin: auto;
+  background: white;
+  border-radius: 6px;
+  padding: 15px;
+  position: relative;
+  top: 20px;
+  box-shadow: 5px 5px 8px 8px grey;
+}
+
+/* Heading */
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+  font-size: 14px;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Inputs */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 6px;
+  margin-top: 5px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+/* Rows */
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.col {
+  width: 50%;
+}
+
+/* Branch */
+.branch {
+  margin-top: 5px;
+}
+
+/* Address */
+textarea {
+  height: 70px;
+}
+
+/* Submit Button */
+button {
+  width: 200px;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  position: relative;
+  left: 100px;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  body {
+    padding: 20px 0;
+    height: auto;
+  }
+
+  .container {
+    width: 80%;
+    height: auto;
+    top: 10px;
+  }
+
+  button {
+    left: 0;
+    margin: 20px auto 0;
+    display: block;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  body {
+    padding: 15px 0;
+  }
+
+  .container {
+    width: 95%;
+    height: auto;
+    padding: 15px;
+  }
+
+  /* Two column → One column */
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    left: 0;
+    font-size: 15px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 400px) {
+  label {
+    font-size: 13px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 14px;
+  }
+}
