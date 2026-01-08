@@ -1,16 +1,16 @@
 document.getElementById("login").addEventListener("click", function () {
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
   const message = document.getElementById("message");
 
-  const correctUsername = "admin@123";
-  const correctPassword = "12345";
+  const Username = "admin@123";
+  const Password = "12345";
 
-  if (username === correctUsername && password === correctPassword) {
+  if (username === Username && password === Password) {
     message.style.color = "green";
     message.innerText = "Login Successful";
 
-    // redirect after 1.5 seconds
+    // redirect after 1 seconds
     setTimeout(function () {
       window.location.href = "main.html";
     }, 1000);

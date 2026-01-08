@@ -1,5 +1,5 @@
 document.getElementById("studentForm").addEventListener("submit", function (e) {
-  e.preventDefault(); 
+  e.preventDefault();
 
   const studentName = document.getElementById("studentName").value.trim();
   const mobile = document.getElementById("mobile").value.trim();
@@ -35,7 +35,6 @@ document.getElementById("studentForm").addEventListener("submit", function (e) {
     return;
   }
 
- 
   const studentValue =
     "Mobile:" +
     mobile +
