@@ -114,7 +114,9 @@ button:active{
     width: 90%;
     text-align: center;
   }
-
+body{
+  height: 100vh;
+}
   .container {
     left: 0;
     margin: 80px auto;
@@ -128,7 +130,9 @@ button:active{
   html, body {
     height: auto;
   }
-
+body{
+  height: 150vh;
+}
   .mainheading {
     width: 95%;
     font-size: 20px;
@@ -138,10 +142,13 @@ button:active{
 
   .container {
     width: 90%;
-    height: auto;
+    height: 380px;
     padding-bottom: 30px;
   }
-
+.message{
+  position: relative;
+  top: 110px;
+}
   .heading {
     left: 0;
     text-align: center;
