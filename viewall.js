@@ -3,7 +3,7 @@ window.onload = loadStudents;
 // Load students from localStorage and populate table
 function loadStudents() {
     const tableBody = document.getElementById("studentTable");
-    tableBody.innerHTML = ""; // clear old rows
+    tableBody.innerHTML = ""; 
 
     if (localStorage.length === 0) {
         const row = tableBody.insertRow();
